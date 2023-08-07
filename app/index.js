@@ -1,6 +1,7 @@
 const usetube = require('usetube')
 const ytrend = require("@freetube/yt-trending-scraper")
 const youtube = require("youtube-search-api");
+const ytsearch = require('ytsearch-node');
 
 
 const express = require('express');
@@ -8,6 +9,13 @@ const app = express();
 const port = 3000;
 
 
+
+
+app.get('/searchv3/:id',async (req, myres) => {
+  const results = await ytsearch(req.params.id);
+  myres.json(results);
+
+});
 
 app.get('/searchv2/:id', (req, myres) => {
     youtube
