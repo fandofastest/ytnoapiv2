@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@freetube/yt-trending-scraper": "^3.1.1",
+    "express": "^4.18.2",
     "usetube": "^2.2.7",
     "youtube-search-api": "^1.2.1",
     "ytsearch-node": "^2.0.7"
